@@ -3,6 +3,8 @@ import {Navigation, Options} from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useCallback, useEffect} from 'react';
 import Purchases from 'react-native-purchases';
+// @ts-ignore
+import AppLovinMAX from 'react-native-applovin-max';
 
 interface props {
   id: string;
@@ -180,7 +182,12 @@ export default {
     Purchases.setDebugLogsEnabled(__DEV__);
     Purchases.setup('uvrCzaMOYVXvkXHYyTYxXNprNEgfcPGR');
   },
-  ads: function () {},
+  ads: function () {
+    AppLovinMAX.initialize(
+      'ioiA26xeiE7sp2y_ooxmzkBikQXzCG2GIIv3T2VKprroz_-gccPp6TZXuZbivFqOP2a3n02TC9W5yDJK3O4QGm',
+      () => {},
+    );
+  },
   staticaly: function () {
     Navigation.setRoot({
       root: {

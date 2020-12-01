@@ -4,7 +4,6 @@ import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import storage from '@react-native-firebase/storage';
 import {utils} from '@react-native-firebase/app';
 import AccountItem from 'components/accountItem';
-import {withContext} from 'utils/context';
 import root from 'utils/navigation/root';
 import {useToast} from 'react-native-toast-hybrid';
 import Purchases from 'react-native-purchases';
@@ -151,4 +150,4 @@ const AccountContent: React.FC<props> = (props) => {
   );
 };
 
-export default withContext(AccountContent);
+export default AccountContent;

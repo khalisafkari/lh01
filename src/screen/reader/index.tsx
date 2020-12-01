@@ -9,6 +9,7 @@ import HeaderRender from '@components/headerRender';
 import FooterRender from '@components/footerRender';
 import {Navigation} from 'react-native-navigation';
 import {chapterAPI} from '@utils/database';
+import ads from '@utils/ads';
 
 interface props {
   id: string;
@@ -46,6 +47,9 @@ const Reader: React.FC<props> = (props) => {
     const listener = {
       componentDidAppear: function () {
         onFetch();
+      },
+      componentDidDisappear: function () {
+        ads.showInterstitial();
       },
     };
     const subscriber = Navigation.events().registerComponentListener(

@@ -9,7 +9,7 @@ import Reader from '@screen/reader';
 import Detail from '@screen/detail';
 import Histroy from '@screen/history';
 import Faq from '@screen/faq';
-//import Account from '@screen/account';
+import Account from '@screen/account';
 import PrivacyPolicy from '@screen/privacy';
 import Buy from '@screen/buy';
 import Advance from '@screen/advance';
@@ -38,7 +38,7 @@ Navigation.registerComponent('net.loveheaven.bookmark', () => Bookmark);
 Navigation.registerComponent('net.loveheaven.settings', () => Settings);
 Navigation.registerComponent('net.loveheaven.history', () => Histroy);
 Navigation.registerComponent('net.loveheaven.faq', () => Faq);
-// Navigation.registerComponent('net.loveheaven.account', () => Account);
+Navigation.registerComponent('net.loveheaven.account', () => Account);
 Navigation.registerComponent('net.loveheaven.privacy', () => PrivacyPolicy);
 Navigation.registerComponent('net.loveheaven.buy', () => Buy);
 

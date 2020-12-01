@@ -3,6 +3,7 @@ import {Pressable, Text} from 'react-native';
 import styles from './styles';
 import {chapterAPI} from '@utils/database';
 import root from 'utils/navigation/root';
+import ads from '@utils/ads';
 
 interface list {
   id: string;
@@ -42,6 +43,7 @@ const ChapterItem: React.FC<props> = (props) => {
         },
       );
       onSetValue();
+      ads.loadInterstitial();
     }, 100);
 
     return () => clearTimeout(timeout);

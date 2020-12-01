@@ -10,12 +10,12 @@ interface props {
 const Settings: React.FC<props> = (props) => {
   return (
     <View style={styles.container}>
-      {/*<MenuItem*/}
-      {/*  id={'account'}*/}
-      {/*  componentId={props.componentId}*/}
-      {/*  title={'ACCOUNT'}*/}
-      {/*  icon={'setting'}*/}
-      {/*/>*/}
+      <MenuItem
+        id={'account'}
+        componentId={props.componentId}
+        title={'ACCOUNT'}
+        icon={'setting'}
+      />
       <MenuItem
         icon={'book'}
         componentId={props.componentId}
