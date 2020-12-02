@@ -21,7 +21,7 @@ const Splash: React.FC<props> = () => {
     const timeout = setTimeout(() => {
       LatLong.getIp().then((results) => {
         if (results !== null) {
-          if (results.country.match(/Japan|Indonesia|Vietnam/gi)) {
+          if (results.country.match(/Japan|Indonesia/gi)) {
             root.tabs();
           } else {
             root.staticaly();

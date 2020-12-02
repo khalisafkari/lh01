@@ -2,6 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import MenuItem from '@components/menuItem';
 import styles from './styles';
+import leaguage from '@utils/leaguage';
 
 interface props {
   componentId: string;
@@ -13,20 +14,20 @@ const Settings: React.FC<props> = (props) => {
       <MenuItem
         id={'account'}
         componentId={props.componentId}
-        title={'ACCOUNT'}
+        title={leaguage.translate('accounts')}
         icon={'setting'}
       />
       <MenuItem
         icon={'book'}
         componentId={props.componentId}
-        title={'HISTORY'}
+        title={leaguage.translate('HISTORY')}
         id={'history'}
       />
       <MenuItem
         id={'faq'}
         icon={'infocirlceo'}
         componentId={props.componentId}
-        title={'FAQ'}
+        title={leaguage.translate('FAQ')}
       />
       <MenuItem
         id={'privacy'}

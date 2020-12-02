@@ -5,6 +5,7 @@ import InputSearch from '@components/inputSearch';
 import GenreList from 'components/genreList';
 import genre from 'utils/genre';
 import root from 'utils/navigation/root';
+import leaguage from '@utils/leaguage';
 
 interface props {
   componentId: string;
@@ -152,7 +153,7 @@ const Advance: React.FC<props> = (props) => {
       <Pressable
         onPress={onSearchLauch}
         style={[styles.btn, {transform: [{translateY}]}]}>
-        <Text style={styles.btnTitle}>Search</Text>
+        <Text style={styles.btnTitle}>{leaguage.translate('search')}</Text>
       </Pressable>
     </SafeAreaView>
   );

@@ -9,6 +9,7 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign';
 import styles from './styles';
 import {Navigation} from 'react-native-navigation';
+import leaguage from '@utils/leaguage';
 
 const Pressable = Animated.createAnimatedComponent(P);
 
@@ -38,7 +39,7 @@ const InputSearch: React.FC<props> = (props) => {
       <TextInput
         {...props.textInput}
         style={styles.inputContainer}
-        placeholder={'search...'}
+        placeholder={leaguage.translate('search') + '...'}
       />
     </View>
   );

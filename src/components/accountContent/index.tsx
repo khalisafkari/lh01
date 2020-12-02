@@ -9,6 +9,7 @@ import {useToast} from 'react-native-toast-hybrid';
 import Purchases from 'react-native-purchases';
 import ProBadge from 'components/proBadge';
 import styles from './styles';
+import leaguage from '@utils/leaguage';
 
 interface props {
   componentId: string;
@@ -122,25 +123,33 @@ const AccountContent: React.FC<props> = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <AccountItem onPress={outBackup} title={'Backup'} icon={'upload'} />
+        <AccountItem
+          onPress={outBackup}
+          title={leaguage.translate('Backup')}
+          icon={'upload'}
+        />
         <AccountItem
           onPress={onRestore}
-          title={'Restore backup'}
+          title={leaguage.translate('Restore backup')}
           icon={'download'}
         />
         {isBuy ? (
           <AccountItem
-            title={'Buy Pro'}
+            title={leaguage.translate('Buy Pro')}
             icon={'shoppingcart'}
             onPress={onBuy}
           />
         ) : null}
         <AccountItem
-          title={'Restore account'}
+          title={leaguage.translate('restore subscription')}
           icon={'customerservice'}
           onPress={onRestoreBuy}
         />
-        <AccountItem title={'Logout'} icon={'logout'} onPress={onLogout} />
+        <AccountItem
+          title={leaguage.translate('Logout')}
+          icon={'logout'}
+          onPress={onLogout}
+        />
       </View>
       <View style={styles.box}>
         <ProBadge />

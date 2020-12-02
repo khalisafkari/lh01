@@ -5,6 +5,7 @@ import ListBookmark from 'components/ListBookmark';
 import styles from './styles';
 import {Navigation} from 'react-native-navigation';
 import Banner from 'components/banner';
+import leaguage from 'utils/leaguage';
 
 interface props {
   componentId: string;
@@ -47,7 +48,8 @@ const Bookmark: React.FC<props> = (props) => {
       {state.length > 0 ? (
         <ListBookmark componentId={props.componentId} list={state} />
       ) : (
-        <Banner text={'Bookmark'} />
+        // @ts-ignore
+        <Banner text={leaguage.translate('bookmark')} />
       )}
     </View>
   );

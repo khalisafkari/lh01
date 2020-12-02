@@ -14,5 +14,6 @@ export default StyleSheet.create({
   title: {
     marginHorizontal: 10,
     color: '#fff',
+    textTransform: 'uppercase',
   },
 });

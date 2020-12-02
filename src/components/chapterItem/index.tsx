@@ -4,6 +4,7 @@ import styles from './styles';
 import {chapterAPI} from '@utils/database';
 import root from 'utils/navigation/root';
 import ads from '@utils/ads';
+import leaguage from '@utils/leaguage';
 
 interface list {
   id: string;
@@ -21,7 +22,10 @@ const ChapterItem: React.FC<props> = (props) => {
 
   const onChangeTitle = useCallback(() => {
     // @ts-ignore
-    return 'Chapter ' + props.list.title.match(/\d+/g).toString();
+    return (
+      `${leaguage.translate('chapter')} ` +
+      props.list.title.match(/\d+/g).toString()
+    );
   }, [props.list.title]);
 
   const onPress = useCallback(() => {
